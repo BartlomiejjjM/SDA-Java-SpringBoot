@@ -1,7 +1,6 @@
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
 <html>
 <head>
@@ -17,5 +16,12 @@
         </li>
     </c:forEach>
 </ul>
+<sec:authorize access="hasRole('USER')">
+    <h2>Secret content!</h2>
+    <p>${message}</p>
+    <p>
+        <a href="/logout">Logout</a>
+    </p>
+</sec:authorize>
 </body>
 </html>
