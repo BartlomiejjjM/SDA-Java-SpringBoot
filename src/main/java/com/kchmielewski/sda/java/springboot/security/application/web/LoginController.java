@@ -1,4 +1,4 @@
-package com.kchmielewski.sda.java.springboot.security.web;
+package com.kchmielewski.sda.java.springboot.security.application.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
